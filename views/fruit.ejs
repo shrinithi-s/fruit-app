@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <title>Fruit</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  </head>
+  <body class="text-center" >
+      <br/>
+      <br/>
+      <h1><%=title%></h1>
+     <br/>
+     <br/>
+      <table class="table table-striped">
+    <thead>
+      <tr>
+        <th >Nutrients</th>
+        <th >Qty</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%for (const [key, value] of Object.entries(myFruit)) {%>
+        <tr>
+        <td><%=key%></td>
+        <td><%=myFruit[key]%> g</td>
+        </tr>
+    <% }%>
+    </tbody>
+  </table>
+  </body>
+</html>
